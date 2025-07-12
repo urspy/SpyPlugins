@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpyRecords - Minecraft Plugin | Plugins Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Plugin Hub Logo">
+                <h1>Minecraft Plugins Hub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Plugins</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search plugins...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="plugin-page">
+        <div class="container">
+            <div class="plugin-header">
+                <div class="plugin-banner">
+                    <img src="https://cdn.modrinth.com/data/cached_images/c22ee28f96591550b60ff312c0e6201700f6a6a9.png" alt="SpyRecords Banner">
+                </div>
+                <div class="plugin-meta">
+                    <h1>SpyRecords</h1>
+                    <div class="author">By <a href="#">SpyMC Team</a></div>
+                    <div class="badges">
+                        <span class="badge version"><i class="fas fa-tag"></i> v1.0.0</span>
+                        <span class="badge minecraft"><i class="fas fa-cube"></i> 1.16.5+</span>
+                        <span class="badge license"><i class="fas fa-file-contract"></i> MIT</span>
+                        <span class="badge downloads"><i class="fas fa-download"></i> 5,342</span>
+                        <span class="badge rating"><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-primary"><i class="fas fa-download"></i> Download (5.3MB)</a>
+                        <a href="#" class="btn-secondary"><i class="fas fa-heart"></i> Favorite</a>
+                        <a href="#" class="btn-tertiary"><i class="fas fa-bug"></i> Report</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plugin-content">
+                <div class="plugin-main">
+                    <section class="plugin-section overview">
+                        <h2><i class="fas fa-bullseye"></i> Overview</h2>
+                        <p><strong>SpyRecords</strong> is a comprehensive Minecraft plugin for SpyMC that tracks player kill/death statistics across multiple servers with different game modes, kits, or arenas. All statistics are combined into one universal record per player, providing a complete cross-server performance analysis system.</p>
+                        
+                        <h3><i class="fas fa-star"></i> Key Features</h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> <strong>Cross-Server Synchronization</strong>: Universal player records shared across your entire server network</li>
+                            <li><i class="fas fa-check"></i> <strong>Global Statistics</strong>: Combined kill/death tracking from ALL servers, game modes, kits, and arenas</li>
+                            <li><i class="fas fa-check"></i> <strong>Global Leaderboards</strong>: Rankings that span your entire server network</li>
+                            <li><i class="fas fa-check"></i> <strong>PlaceholderAPI Integration</strong>: Display statistics anywhere with 8+ available placeholders</li>
+                            <li><i class="fas fa-check"></i> <strong>Real-Time Updates</strong>: Instant synchronization across all connected servers</li>
+                            <li><i class="fas fa-check"></i> <strong>MariaDB Backend</strong>: Reliable, scalable database solution for large networks</li>
+                            <li><i class="fas fa-check"></i> <strong>Performance Optimized</strong>: Asynchronous operations with minimal server impact</li>
+                        </ul>
+                    </section>
+
+                    <section class="plugin-section installation">
+                        <h2><i class="fas fa-rocket"></i> Quick Start</h2>
+                        
+                        <h3>Installation</h3>
+                        <ol>
+                            <li><strong>Download</strong> the latest <code>SpyRecords.jar</code> (5.3MB) from releases</li>
+                            <li><strong>Place</strong> the JAR file in your server's <code>plugins/</code> folder</li>
+                            <li><strong>Start</strong> your server to generate the configuration files</li>
+                            <li><strong>Configure</strong> your database settings in <code>config.yml</code></li>
+                            <li><strong>Restart</strong> your server to activate cross-server functionality</li>
+                        </ol>
+
+                        <h3>Basic Configuration</h3>
+                        <div class="code-block">
+                            <pre><code># config.yml
+storage:
+  type: 'mariadb'  # Use 'json' for single server
+  mariadb:
+    host: 'your-database-host.com'
+    database: 'spyrecords_global'
+    username: 'spyrecords_user'
+    password: 'your_secure_password'</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section commands">
+                        <h2><i class="fas fa-terminal"></i> Commands</h2>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Command</th>
+                                        <th>Description</th>
+                                        <th>Permission</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>/sr stats [player]</code></td>
+                                        <td>View global player statistics</td>
+                                        <td><code>spyrecords.stats</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/sr top [kills|deaths|kdr]</code></td>
+                                        <td>Global top 10 leaderboards</td>
+                                        <td><code>spyrecords.top</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/sr info</code></td>
+                                        <td>Plugin information and version</td>
+                                        <td><code>spyrecords.info</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/sr reload</code></td>
+                                        <td>Reload plugin configuration</td>
+                                        <td><code>spyrecords.admin</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/sr reset &lt;player&gt;</code></td>
+                                        <td>Reset player's global statistics</td>
+                                        <td><code>spyrecords.admin</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/sr set &lt;player&gt; &lt;kills&gt; &lt;deaths&gt;</code></td>
+                                        <td>Edit player's statistics</td>
+                                        <td><code>spyrecords.admin</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section placeholders">
+                        <h2><i class="fas fa-code"></i> PlaceholderAPI Integration</h2>
+                        
+                        <h3>Basic Statistics</h3>
+                        <ul>
+                            <li><code>%spyrecords_kills%</code> - Player's total kills (cross-server)</li>
+                            <li><code>%spyrecords_deaths%</code> - Player's total deaths (cross-server)</li>
+                            <li><code>%spyrecords_kdr%</code> - Player's kill/death ratio</li>
+                            <li><code>%spyrecords_ratio%</code> - Alternative KDR placeholder</li>
+                            <li><code>%spyrecords_name%</code> - Player's recorded name</li>
+                        </ul>
+
+                        <h3>Ranking Placeholders</h3>
+                        <ul>
+                            <li><code>%spyrecords_rank_kills%</code> - Global kills leaderboard position</li>
+                            <li><code>%spyrecords_rank_deaths%</code> - Global deaths leaderboard position</li>
+                            <li><code>%spyrecords_rank_kdr%</code> - Global KDR leaderboard position</li>
+                        </ul>
+                    </section>
+
+                    <section class="plugin-section cross-server">
+                        <h2><i class="fas fa-network-wired"></i> Cross-Server Setup</h2>
+                        
+                        <h3>How It Works</h3>
+                        <ol>
+                            <li><strong>Shared Database</strong>: All servers connect to one MariaDB database</li>
+                            <li><strong>Universal Records</strong>: Each player has ONE record across all servers</li>
+                            <li><strong>Real-Time Sync</strong>: Statistics update instantly across your network</li>
+                            <li><strong>Combined Display</strong>: Shows total stats from ALL servers and game modes</li>
+                        </ol>
+
+                        <h3>Setup Instructions</h3>
+                        
+                        <h4>1. Database Setup</h4>
+                        <div class="code-block">
+                            <pre><code>CREATE DATABASE spyrecords_global;
+CREATE USER 'spyrecords_user'@'%' IDENTIFIED BY 'your_secure_password';
+GRANT ALL PRIVILEGES ON spyrecords_global.* TO 'spyrecords_user'@'%';
+FLUSH PRIVILEGES;</code></pre>
+                        </div>
+
+                        <h4>2. Configuration (All Servers)</h4>
+                        <div class="code-block">
+                            <pre><code>storage:
+  type: 'mariadb'
+  mariadb:
+    host: 'your-database-host.com'
+    port: 3306
+    database: 'spyrecords_global'
+    username: 'spyrecords_user'
+    password: 'your_secure_password'
+    ssl: false</code></pre>
+                        </div>
+
+                        <h4>3. Network Architecture</h4>
+                        <div class="architecture-diagram">
+                            <pre>
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│   Server 1  │    │   Server 2  │    │   Server 3  │
+│  (Survival) │    │    (PvP)    │    │  (Minigames)│
+└─────┬───────┘    └─────┬───────┘    └─────┬───────┘
+      │                  │                  │
+      └──────────────────┼──────────────────┘
+                         │
+                ┌────────▼────────┐
+                │ MariaDB Database│
+                │ (Global Records)│
+                └─────────────────┘</pre>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section technical">
+                        <h2><i class="fas fa-cogs"></i> Technical Specifications</h2>
+                        
+                        <h3>System Requirements</h3>
+                        <ul>
+                            <li><strong>Minecraft Version</strong>: 1.16.5+</li>
+                            <li><strong>Java Version</strong>: 8+</li>
+                            <li><strong>Server Software</strong>: Spigot, Paper, or compatible</li>
+                            <li><strong>Database</strong>: MariaDB 10.3+ (for cross-server) or Local JSON storage</li>
+                            <li><strong>RAM</strong>: Minimum 512MB allocated to Minecraft server</li>
+                        </ul>
+
+                        <h3>Performance Metrics</h3>
+                        <ul>
+                            <li><strong>JAR Size</strong>: 5.3MB (includes all dependencies)</li>
+                            <li><strong>Database Operations</strong>: Fully asynchronous</li>
+                            <li><strong>Memory Usage</strong>: &lt;50MB additional RAM usage</li>
+                            <li><strong>Network Load</strong>: Minimal - only essential data synchronization</li>
+                        </ul>
+
+                        <h3>Dependencies</h3>
+                        <ul>
+                            <li><strong>Required</strong>: None (all dependencies included)</li>
+                            <li><strong>Optional</strong>: PlaceholderAPI (for placeholder functionality)</li>
+                            <li><strong>Optional</strong>: HolographicDisplays (for hologram leaderboards)</li>
+                        </ul>
+                    </section>
+
+                    <section class="plugin-section configuration">
+                        <h2><i class="fas fa-sliders-h"></i> Configuration Reference</h2>
+                        
+                        <h3>Complete Configuration File</h3>
+                        <div class="code-block">
+                            <pre><code># SpyRecords Configuration
+storage:
+  type: 'mariadb'  # Options: 'json', 'mariadb'
+  
+  # JSON Storage (Single Server)
+  json:
+    file_name: 'player_records.json'
+  
+  # MariaDB Storage (Cross-Server)
+  mariadb:
+    host: 'localhost'
+    port: 3306
+    database: 'spyrecords'
+    username: 'spyrecords'
+    password: 'password'
+    ssl: false
+    connection_timeout: 10000
+    socket_timeout: 10000
+
+# PlaceholderAPI Settings
+placeholderapi:
+  enabled: true
+  decimal_places: 2
+  no_data_value: "0"
+
+# Message Customization
+messages:
+  prefix: '&8[&eSpyRecords&8] '
+  stats_header: '&8&m----------&r &eGlobal Statistics for {player} &8&m----------'
+  stats_kills: '&7💀 Total Kills: &e{kills} &7(across all servers)'
+  stats_deaths: '&7☠️ Total Deaths: &e{deaths} &7(across all servers)'
+  stats_kdr: '&7⚔️ Kill/Death Ratio: &e{kdr}'
+  top_header: '&8&m----------&r &eGLOBAL TOP {type} LEADERBOARD &8&m----------'
+  top_entry: '&7{rank}. &e{player}&7: &a{value}'</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section troubleshooting">
+                        <h2><i class="fas fa-question-circle"></i> Troubleshooting</h2>
+                        
+                        <h3>Common Issues</h3>
+                        
+                        <h4>"Player not found" Error</h4>
+                        <ul>
+                            <li><strong>Cause</strong>: Player hasn't played on current server but has stats on others</li>
+                            <li><strong>Solution</strong>: Fixed in v1.0.0 - now searches across all servers automatically</li>
+                        </ul>
+
+                        <h4>Database Connection Failed</h4>
+                        <ul>
+                            <li><strong>Check</strong>: Database host, port, credentials, and network connectivity</li>
+                            <li><strong>Solution</strong>: Verify MariaDB is running and accessible from server</li>
+                        </ul>
+
+                        <h4>Statistics Not Syncing</h4>
+                        <ul>
+                            <li><strong>Check</strong>: All servers using same database configuration</li>
+                            <li><strong>Solution</strong>: Ensure identical <code>config.yml</code> database settings on all servers</li>
+                        </ul>
+
+                        <h3>Debug Mode</h3>
+                        <p>Enable debug logging in <code>config.yml</code>:</p>
+                        <div class="code-block">
+                            <pre><code>debug: true</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section changelog">
+                        <h2><i class="fas fa-history"></i> Changelog</h2>
+                        
+                        <h3>v1.0.0 (Current)</h3>
+                        <ul>
+                            <li>✅ Cross-server player lookup implementation</li>
+                            <li>✅ Automatic record creation on player join</li>
+                            <li>✅ Enhanced PlaceholderAPI with ranking placeholders</li>
+                            <li>✅ Improved database queries for name-based searches</li>
+                            <li>✅ Complete message configuration system</li>
+                            <li>✅ MariaDB cross-server synchronization</li>
+                            <li>✅ Global leaderboards and statistics display</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="plugin-sidebar">
+                    <div class="sidebar-widget download">
+                        <h3>Download</h3>
+                        <a href="#" class="btn-primary"><i class="fas fa-download"></i> Download Now (5.3MB)</a>
+                        <div class="download-info">
+                            <p><strong>Version:</strong> 1.0.0</p>
+                            <p><strong>Updated:</strong> June 15, 2023</p>
+                            <p><strong>Compatibility:</strong> 1.16.5+</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget stats">
+                        <h3>Statistics</h3>
+                        <div class="stat-item">
+                            <span class="stat-label">Downloads:</span>
+                            <span class="stat-value">5,342</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Rating:</span>
+                            <span class="stat-value">4.8 <i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">File Size:</span>
+                            <span class="stat-value">5.3MB</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget requirements">
+                        <h3>Requirements</h3>
+                        <ul>
+                            <li><i class="fas fa-server"></i> Minecraft 1.16.5+</li>
+                            <li><i class="fab fa-java"></i> Java 8+</li>
+                            <li><i class="fas fa-database"></i> MariaDB (for cross-server)</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget links">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-book"></i> Documentation</a></li>
+                            <li><a href="#"><i class="fas fa-code"></i> Source Code</a></li>
+                            <li><a href="#"><i class="fas fa-bug"></i> Issue Tracker</a></li>
+                            <li><a href="#"><i class="fas fa-comments"></i> Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget author">
+                        <h3>Author</h3>
+                        <div class="author-info">
+                            <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Author Avatar">
+                            <div class="author-details">
+                                <h4>SpyMC Team</h4>
+                                <p>Developer of quality Minecraft plugins</p>
+                                <div class="author-links">
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fab fa-spigot"></i></a>
+                                    <a href="#"><i class="fab fa-discord"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget license">
+                        <h3>License</h3>
+                        <p>This project is licensed under the MIT License.</p>
+                        <a href="#" class="btn-tertiary"><i class="fas fa-file-alt"></i> View License</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Minecraft Plugins Hub is the premier destination for server owners to find quality plugins for their Minecraft servers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Plugins</a></li>
+                        <li><a href="#">Submit Plugin</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">DMCA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Minecraft Plugins Hub. All rights reserved. Not affiliated with Mojang or Microsoft.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
