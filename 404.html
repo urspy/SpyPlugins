@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Minecraft Plugins Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 404 Page Specific Styles */
+        .error-page {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .error-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .error-message {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--text-light);
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .error-search {
+            margin-top: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .error-search .search-box {
+            width: 100%;
+            display: flex;
+        }
+        
+        .error-search input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            font-size: 1rem;
+        }
+        
+        .error-search button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .error-search button:hover {
+            background-color: #2980b9;
+        }
+        
+        .error-image {
+            margin: 40px auto;
+            max-width: 300px;
+        }
+        
+        .error-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .error-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Plugin Hub Logo">
+                <h1>Minecraft Plugins Hub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Plugins</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search plugins...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="error-page">
+        <div class="container">
+            <div class="error-content">
+                <div class="error-image">
+                    <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="404 Error">
+                </div>
+                <div class="error-code">404</div>
+                <h1 class="error-title">Plugin Not Found</h1>
+                <p class="error-message">
+                    The plugin or page you're looking for doesn't exist or may have been moved.
+                    Try searching below or check out our popular plugins.
+                </p>
+                
+                <div class="error-actions">
+                    <a href="index.html" class="btn-primary">
+                        <i class="fas fa-home"></i> Return Home
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        <i class="fas fa-box-open"></i> Browse Plugins
+                    </a>
+                    <a href="#" class="btn-tertiary">
+                        <i class="fas fa-question-circle"></i> Get Help
+                    </a>
+                </div>
+                
+                <div class="error-search">
+                    <h3>Search for plugins:</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search plugins...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="featured-plugins" style="background-color: #f5f7fa; padding: 60px 0;">
+        <div class="container">
+            <h2>Popular Plugins You Might Like</h2>
+            <div class="plugin-grid">
+                <!-- Plugin 1 -->
+                <div class="plugin-card" onclick="window.location.href='spyrecords.html'">
+                    <div class="plugin-banner">
+                        <img src="https://cdn.modrinth.com/data/cached_images/c22ee28f96591550b60ff312c0e6201700f6a6a9.png" alt="SpyRecords Banner">
+                    </div>
+                    <div class="plugin-info">
+                        <h3>SpyRecords</h3>
+                        <div class="badges">
+                            <span class="badge version">v1.0.0</span>
+                            <span class="badge minecraft">1.16.5+</span>
+                            <span class="badge license">MIT</span>
+                        </div>
+                        <p class="description">Cross-server player statistics tracking with global leaderboards and PlaceholderAPI integration.</p>
+                        <div class="stats">
+                            <span><i class="fas fa-download"></i> 5,342</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plugin 2 -->
+                <div class="plugin-card" onclick="window.location.href='arena4v4.html'">
+                    <div class="plugin-banner">
+                        <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Arena4v4 Banner">
+                    </div>
+                    <div class="plugin-info">
+                        <h3>Arena4v4</h3>
+                        <div class="badges">
+                            <span class="badge version">v1.0.0</span>
+                            <span class="badge minecraft">1.21+</span>
+                            <span class="badge license">Proprietary</span>
+                        </div>
+                        <p class="description">Competitive 4v4 matchmaking with ELO ranking, kit support, and arena management.</p>
+                        <div class="stats">
+                            <span><i class="fas fa-download"></i> 1,245</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plugin 3 -->
+                <div class="plugin-card">
+                    <div class="plugin-banner">
+                        <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Plugin Banner">
+                    </div>
+                    <div class="plugin-info">
+                        <h3>EconomyPlus</h3>
+                        <div class="badges">
+                            <span class="badge version">v2.3.1</span>
+                            <span class="badge minecraft">1.18+</span>
+                            <span class="badge license">GPL</span>
+                        </div>
+                        <p class="description">Advanced economy system with shops, banks, and custom currency support.</p>
+                        <div class="stats">
+                            <span><i class="fas fa-download"></i> 12,789</span>
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plugin 4 -->
+                <div class="plugin-card">
+                    <div class="plugin-banner">
+                        <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Plugin Banner">
+                    </div>
+                    <div class="plugin-info">
+                        <h3>SkyblockPro</h3>
+                        <div class="badges">
+                            <span class="badge version">v5.1.2</span>
+                            <span class="badge minecraft">1.17+</span>
+                            <span class="badge license">MIT</span>
+                        </div>
+                        <p class="description">Feature-rich skyblock plugin with islands, challenges, and custom upgrades.</p>
+                        <div class="stats">
+                            <span><i class="fas fa-download"></i> 15,203</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn-primary">View All Plugins</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Minecraft Plugins Hub is the premier destination for server owners to find quality plugins for their Minecraft servers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Plugins</a></li>
+                        <li><a href="#">Submit Plugin</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">DMCA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Minecraft Plugins Hub. All rights reserved. Not affiliated with Mojang or Microsoft.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // 404 Page Specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality for 404 page
+            const searchBox = document.querySelector('.error-search .search-box');
+            if (searchBox) {
+                const searchInput = searchBox.querySelector('input');
+                const searchButton = searchBox.querySelector('button');
+                
+                function performSearch() {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        alert(`Searching for: ${query}`);
+                        // In a real implementation, you would redirect to search results
+                        // window.location.href = `/search?q=${encodeURIComponent(query)}`;
+                    }
+                }
+                
+                searchButton.addEventListener('click', performSearch);
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+            }
+            
+            // Add animation to 404 text
+            const errorCode = document.querySelector('.error-code');
+            if (errorCode) {
+                errorCode.style.opacity = '0';
+                errorCode.style.transform = 'translateY(20px)';
+                errorCode.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    errorCode.style.opacity = '1';
+                    errorCode.style.transform = 'translateY(0)';
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
