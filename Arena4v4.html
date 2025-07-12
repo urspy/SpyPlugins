@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena4v4 - Competitive Matchmaking Plugin | Plugins Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Plugin Hub Logo">
+                <h1>Minecraft Plugins Hub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Plugins</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search plugins...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="plugin-page">
+        <div class="container">
+            <div class="plugin-header">
+                <div class="plugin-banner">
+                    <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Arena4v4 Banner">
+                </div>
+                <div class="plugin-meta">
+                    <h1>Arena4v4</h1>
+                    <div class="author">By <a href="#">YourSenior - SpyMC</a></div>
+                    <div class="badges">
+                        <span class="badge version"><i class="fas fa-tag"></i> v1.0.0</span>
+                        <span class="badge minecraft"><i class="fas fa-cube"></i> 1.21+</span>
+                        <span class="badge license"><i class="fas fa-file-contract"></i> Proprietary</span>
+                        <span class="badge downloads"><i class="fas fa-download"></i> 1,245</span>
+                        <span class="badge rating"><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-primary"><i class="fas fa-download"></i> Download (82KB)</a>
+                        <a href="https://buymeacoffee.com/yoursenior" class="btn-secondary" target="_blank"><i class="fas fa-heart"></i> Donate</a>
+                        <a href="#" class="btn-tertiary"><i class="fas fa-bug"></i> Report</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plugin-content">
+                <div class="plugin-main">
+                    <section class="plugin-section overview">
+                        <h2><i class="fas fa-bullseye"></i> Overview</h2>
+                        <p><strong>Arena4v4</strong> is a production-ready, fast-paced team-based dueling plugin designed for Minecraft servers looking to offer ranked 4v4 matches with kit support, ELO ranking, arena management, and smart queueing—all packed in a lightweight and optimized JAR.</p>
+                        
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle"></i> <strong>Support:</strong> For help, updates, or support, reach out via Discord or <a href="https://buymeacoffee.com/yoursenior" target="_blank">donate</a>.
+                        </div>
+                    </section>
+
+                    <section class="plugin-section fixes">
+                        <h2><i class="fas fa-wrench"></i> Critical Issues Fixed</h2>
+                        
+                        <div class="fix-item">
+                            <h3>1. NullPointerException Error – <span class="status resolved">RESOLVED</span></h3>
+                            <ul>
+                                <li>Fixed initialization order: <code>ConfigManager</code> now loads before <code>ArenaManager</code></li>
+                                <li>Comprehensive null safety checks added across managers</li>
+                                <li>Fallback configuration systems now in place</li>
+                            </ul>
+                        </div>
+
+                        <div class="fix-item">
+                            <h3>2. Configuration Loading – <span class="status enhanced">ENHANCED</span></h3>
+                            <ul>
+                                <li>Graceful error handling for missing or broken config files</li>
+                                <li>Automatic fallback creation for default configurations</li>
+                                <li>Verbose logging system added for easier debugging</li>
+                            </ul>
+                        </div>
+
+                        <div class="fix-item">
+                            <h3>3. WorldEdit Dependency – <span class="status optimized">OPTIMIZED</span></h3>
+                            <ul>
+                                <li>WorldEdit made completely optional (<code>softdepend</code>)</li>
+                                <li>Plugin detects and adapts if WorldEdit is not installed</li>
+                            </ul>
+                        </div>
+
+                        <div class="fix-item">
+                            <h3>4. Default Systems – <span class="status implemented">IMPLEMENTED</span></h3>
+                            <ul>
+                                <li>Auto-loaded default kits: <em>Iron</em> and <em>Diamond</em></li>
+                                <li>Arena data files generate automatically if missing</li>
+                                <li>Handles empty or missing configurations without crashing</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section commands">
+                        <h2><i class="fas fa-terminal"></i> Commands</h2>
+                        
+                        <h3>Player Commands</h3>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Command</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>/4v4 join [kit]</code></td>
+                                        <td>Join the matchmaking queue (optional kit name)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4 leave</code></td>
+                                        <td>Leave the current queue</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4 stats [player]</code></td>
+                                        <td>View player statistics</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4 top [wins|kills|elo]</code></td>
+                                        <td>View top players</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4 spectate [player]</code></td>
+                                        <td>Spectate an ongoing match</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4 gui</code></td>
+                                        <td>Open visual kit selector with one-click queue joining</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4 toggle</code></td>
+                                        <td>Toggle match requests on/off</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>Admin Commands</h3>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Command</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>/4v4admin create &lt;arena&gt;</code></td>
+                                        <td>Create a new arena</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4admin delete &lt;arena&gt;</code></td>
+                                        <td>Delete an existing arena</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4admin setspawn &lt;arena&gt; &lt;team&gt; &lt;pos&gt;</code></td>
+                                        <td>Set team spawn point in an arena</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4admin savekit &lt;name&gt;</code></td>
+                                        <td>Save your current inventory as a kit</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4admin loadkit &lt;name&gt;</code></td>
+                                        <td>Load a previously saved kit into inventory</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4admin setpos1 &lt;arena&gt;</code></td>
+                                        <td>Set arena region position 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4admin setpos2 &lt;arena&gt;</code></td>
+                                        <td>Set arena region position 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4admin saveblocks &lt;arena&gt;</code></td>
+                                        <td>Save arena blocks for auto-reset</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/4v4admin setlobby</code></td>
+                                        <td>Set lobby location</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section systems">
+                        <h2><i class="fas fa-cogs"></i> Core Systems</h2>
+                        
+                        <div class="system-grid">
+                            <div class="system-card">
+                                <i class="fas fa-users"></i>
+                                <h3>Automatic Queue</h3>
+                                <p>Balanced 4v4 matchmaking system that ensures fair teams based on ELO ratings.</p>
+                            </div>
+                            <div class="system-card">
+                                <i class="fas fa-trophy"></i>
+                                <h3>ELO Rating</h3>
+                                <p>Player ranking system saved via SQLite with persistent statistics tracking.</p>
+                            </div>
+                            <div class="system-card">
+                                <i class="fas fa-eye"></i>
+                                <h3>Spectator Mode</h3>
+                                <p>Live match viewing for non-players with first-person spectating options.</p>
+                            </div>
+                            <div class="system-card">
+                                <i class="fas fa-tshirt"></i>
+                                <h3>Kit System</h3>
+                                <p>Supports default & custom kits that can be saved and loaded by admins.</p>
+                            </div>
+                            <div class="system-card">
+                                <i class="fas fa-map"></i>
+                                <h3>Arena Management</h3>
+                                <p>Create, delete, and configure multiple arenas with team spawn points.</p>
+                            </div>
+                            <div class="system-card">
+                                <i class="fas fa-database"></i>
+                                <h3>SQLite Storage</h3>
+                                <p>Persistent statistics and match data stored in efficient SQLite database.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section verification">
+                        <h2><i class="fas fa-check-circle"></i> Plugin Verification</h2>
+                        
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>JAR Size</td>
+                                        <td><span class="status verified">82KB</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Classes Compiled</td>
+                                        <td><span class="status verified">27</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Main Class</td>
+                                        <td><span class="status verified"><code>com.spysquad.arena4v4.SpySquad4v4</code></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>API Compatibility</td>
+                                        <td><span class="status verified">Minecraft 1.21+</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Config Files</td>
+                                        <td><span class="status verified"><code>config.yml</code>, <code>kits.yml</code></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dependency</td>
+                                        <td><span class="status verified">WorldEdit (Optional)</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section installation">
+                        <h2><i class="fas fa-download"></i> Installation Guide</h2>
+                        
+                        <ol>
+                            <li>Drop <code>arena4v4-1.0.0.jar</code> into your server's <code>/plugins/</code> folder.</li>
+                            <li><em>(Optional)</em> Add WorldEdit if you prefer region-based arena setup.</li>
+                            <li>Start your server to auto-generate configs and default kits.</li>
+                            <li>Use <code>/4v4admin</code> commands to configure arenas and spawns.</li>
+                            <li>Ready to play!</li>
+                        </ol>
+                    </section>
+
+                    <section class="plugin-section configuration">
+                        <h2><i class="fas fa-sliders-h"></i> Configuration Files</h2>
+                        
+                        <div class="config-files">
+                            <div class="config-file">
+                                <h3><code>config.yml</code></h3>
+                                <p>Main plugin settings including:</p>
+                                <ul>
+                                    <li>Queue settings</li>
+                                    <li>ELO calculation parameters</li>
+                                    <li>Arena defaults</li>
+                                    <li>Database configuration</li>
+                                </ul>
+                            </div>
+                            <div class="config-file">
+                                <h3><code>kits.yml</code></h3>
+                                <p>Predefined and saved kits including:</p>
+                                <ul>
+                                    <li>Default <em>Iron</em> and <em>Diamond</em> kits</li>
+                                    <li>Custom kit configurations</li>
+                                    <li>Kit permissions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="note">Both files are <strong>auto-generated</strong> and <strong>editable</strong> after first server launch.</p>
+                    </section>
+
+                    <section class="plugin-section tips">
+                        <h2><i class="fas fa-lightbulb"></i> Tips for Admins</h2>
+                        
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <h3>Multiple Arenas</h3>
+                                <p>Want different arenas per map? Use <code>/4v4admin setspawn</code> on multiple arenas to create variety.</p>
+                            </div>
+                            <div class="tip-card">
+                                <i class="fas fa-balance-scale"></i>
+                                <h3>Kit Balance</h3>
+                                <p>Balance kits for fairness—start with <code>iron</code> and <code>diamond</code> as base kits, then expand with custom variations.</p>
+                            </div>
+                            <div class="tip-card">
+                                <i class="fas fa-binoculars"></i>
+                                <h3>Spectator Mode</h3>
+                                <p>Use spectator mode to monitor players or host live events with commentary.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="plugin-section compatibility">
+                        <h2><i class="fas fa-plug"></i> Compatibility</h2>
+                        
+                        <ul class="compatibility-list">
+                            <li><i class="fas fa-check-circle"></i> <strong>Paper 1.21+</strong> (fully tested)</li>
+                            <li><i class="fas fa-check-circle"></i> Compatible with most scoreboard/tablist plugins</li>
+                            <li><i class="fas fa-check-circle"></i> Works standalone or with WorldEdit</li>
+                            <li><i class="fas fa-check-circle"></i> Supports MySQL with additional configuration</li>
+                        </ul>
+                    </section>
+
+                    <section class="plugin-section license">
+                        <h2><i class="fas fa-lock"></i> License</h2>
+                        
+                        <div class="license-notice">
+                            <p>Arena4v4 is a closed-source, proprietary plugin developed by <strong>SpySquad</strong>.</p>
+                            <p>Redistribution, resale, or modification without permission is <strong>strictly prohibited</strong>.</p>
+                            <a href="https://status.spymc.xyz/license" class="btn-tertiary" target="_blank"><i class="fas fa-file-contract"></i> View License</a>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="plugin-sidebar">
+                    <div class="sidebar-widget download">
+                        <h3>Download</h3>
+                        <a href="#" class="btn-primary"><i class="fas fa-download"></i> Download Now (82KB)</a>
+                        <div class="download-info">
+                            <p><strong>Version:</strong> 1.0.0</p>
+                            <p><strong>Updated:</strong> July 10, 2023</p>
+                            <p><strong>Compatibility:</strong> 1.21+</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget stats">
+                        <h3>Statistics</h3>
+                        <div class="stat-item">
+                            <span class="stat-label">Downloads:</span>
+                            <span class="stat-value">1,245</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Rating:</span>
+                            <span class="stat-value">4.9 <i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">File Size:</span>
+                            <span class="stat-value">82KB</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget requirements">
+                        <h3>Requirements</h3>
+                        <ul>
+                            <li><i class="fas fa-server"></i> Minecraft 1.21+</li>
+                            <li><i class="fab fa-java"></i> Java 17+</li>
+                            <li><i class="fas fa-database"></i> SQLite (included)</li>
+                            <li><i class="fas fa-cube"></i> WorldEdit (optional)</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget links">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-book"></i> Documentation</a></li>
+                            <li><a href="#"><i class="fas fa-code"></i> API Reference</a></li>
+                            <li><a href="#"><i class="fas fa-bug"></i> Issue Tracker</a></li>
+                            <li><a href="#"><i class="fas fa-comments"></i> Support</a></li>
+                            <li><a href="https://buymeacoffee.com/yoursenior" target="_blank"><i class="fas fa-coffee"></i> Donate</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget author">
+                        <h3>Author</h3>
+                        <div class="author-info">
+                            <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Author Avatar">
+                            <div class="author-details">
+                                <h4>YourSenior - SpyMC</h4>
+                                <p>Developer of competitive Minecraft plugins</p>
+                                <div class="author-links">
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fab fa-spigot"></i></a>
+                                    <a href="#"><i class="fab fa-discord"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget kits">
+                        <h3>Available Kits</h3>
+                        <ul class="kit-list">
+                            <li><span class="kit-name">default</span> - Standard PvP kit</li>
+                            <li><span class="kit-name">hardcore</span> - Advanced PvP kit</li>
+                            <li><span class="kit-name">iron</span> - Balanced iron gear</li>
+                            <li><span class="kit-name">diamond</span> - High-tier diamond gear</li>
+                            <li class="custom-kit">Custom kits created by admins</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Minecraft Plugins Hub is the premier destination for server owners to find quality plugins for their Minecraft servers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Plugins</a></li>
+                        <li><a href="#">Submit Plugin</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">DMCA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Minecraft Plugins Hub. All rights reserved. Not affiliated with Mojang or Microsoft.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
