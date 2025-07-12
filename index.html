@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Plugins Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Plugin Hub Logo">
+                <h1>Minecraft Plugins Hub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Plugins</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search plugins...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Discover Amazing Minecraft Plugins</h2>
+                <p>Enhance your server with our curated collection of high-quality plugins</p>
+                <div class="cta-buttons">
+                    <a href="#featured" class="btn-primary">Browse Plugins</a>
+                    <a href="#" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-plugins">
+            <div class="container">
+                <h2>Featured Plugins</h2>
+                <div class="plugin-grid">
+                    <!-- Plugin 1 -->
+                    <div class="plugin-card" onclick="window.location.href='spyrecords.html'">
+                        <div class="plugin-banner">
+                            <img src="https://cdn.modrinth.com/data/cached_images/c22ee28f96591550b60ff312c0e6201700f6a6a9.png" alt="SpyRecords Banner">
+                        </div>
+                        <div class="plugin-info">
+                            <h3>SpyRecords</h3>
+                            <div class="badges">
+                                <span class="badge version">v1.0.0</span>
+                                <span class="badge minecraft">1.16.5+</span>
+                                <span class="badge license">MIT</span>
+                            </div>
+                            <p class="description">Cross-server player statistics tracking with global leaderboards and PlaceholderAPI integration.</p>
+                            <div class="stats">
+                                <span><i class="fas fa-download"></i> 5,342</span>
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plugin 2 -->
+                    <div class="plugin-card">
+                        <div class="plugin-banner">
+                            <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Plugin Banner">
+                        </div>
+                        <div class="plugin-info">
+                            <h3>EconomyPlus</h3>
+                            <div class="badges">
+                                <span class="badge version">v2.3.1</span>
+                                <span class="badge minecraft">1.18+</span>
+                                <span class="badge license">GPL</span>
+                            </div>
+                            <p class="description">Advanced economy system with shops, banks, and custom currency support.</p>
+                            <div class="stats">
+                                <span><i class="fas fa-download"></i> 12,789</span>
+                                <span><i class="fas fa-star"></i> 4.6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plugin 3 -->
+                    <div class="plugin-card">
+                        <div class="plugin-banner">
+                            <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Plugin Banner">
+                        </div>
+                        <div class="plugin-info">
+                            <h3>UltimatePvP</h3>
+                            <div class="badges">
+                                <span class="badge version">v3.2.0</span>
+                                <span class="badge minecraft">1.19+</span>
+                                <span class="badge license">Premium</span>
+                            </div>
+                            <p class="description">Complete PvP solution with kits, arenas, tournaments, and stats tracking.</p>
+                            <div class="stats">
+                                <span><i class="fas fa-download"></i> 8,451</span>
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plugin 4 -->
+                    <div class="plugin-card">
+                        <div class="plugin-banner">
+                            <img src="https://cdn.modrinth.com/data/cached_images/4aecd844fb21c4be57a70bc3815b6ab757bcdf8f.png" alt="Plugin Banner">
+                        </div>
+                        <div class="plugin-info">
+                            <h3>SkyblockPro</h3>
+                            <div class="badges">
+                                <span class="badge version">v5.1.2</span>
+                                <span class="badge minecraft">1.17+</span>
+                                <span class="badge license">MIT</span>
+                            </div>
+                            <p class="description">Feature-rich skyblock plugin with islands, challenges, and custom upgrades.</p>
+                            <div class="stats">
+                                <span><i class="fas fa-download"></i> 15,203</span>
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all">
+                    <a href="#" class="btn-primary">View All Plugins</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>Popular Categories</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Player Management</h3>
+                        <p>Permissions, ranks, and player tools</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-coins"></i>
+                        <h3>Economy</h3>
+                        <p>Currency, shops, and trading systems</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-swords"></i>
+                        <h3>PvP</h3>
+                        <p>Combat, arenas, and tournaments</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-cubes"></i>
+                        <h3>World Management</h3>
+                        <p>World generation and protection</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Minigames</h3>
+                        <p>Games and fun activities</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Statistics</h3>
+                        <p>Tracking and analytics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Minecraft Plugins Hub is the premier destination for server owners to find quality plugins for their Minecraft servers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Plugins</a></li>
+                        <li><a href="#">Submit Plugin</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">DMCA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Minecraft Plugins Hub. All rights reserved. Not affiliated with Mojang or Microsoft.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
